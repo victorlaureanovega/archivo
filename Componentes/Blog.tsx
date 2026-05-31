@@ -1,5 +1,3 @@
-'use client';
-
 import Link from "next/link";
 import { Entradas } from "../Data/Entradas";
 import type { ArchivoBlog } from "../Data/Interfaces"

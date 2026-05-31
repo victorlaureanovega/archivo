@@ -1,50 +1,15 @@
 // Para mostrar en el Archivo. Los años más recientes deben ocupar las primeras posiciones del arreglo
 export const Proyectos = [
     {
-        "anio": 2025,
-        "proyectos": [
-            {
-                "nombre": "Cortometraje de Péndulo a media oscuridad",
-                "enlace": "https://youtu.be/z6mUjEQjh_g"
-            },
-            {
-                "nombre": "Convertidor",
-                "enlace": "https://github.com/victorlaureanovega/Convertidor"
-            },
-            {
-                "nombre": "Katia y la muerte",
-                "enlace": "https://github.com/victorlaureanovega/Katia_y_la_muerte"
-            }
-        ]
+        "nombre": "Ciudades de treinta minutos",
+        "enlace": "https://www.amazon.com.mx/dp/B0DDG41VF1"
     },
     {
-        "anio": 2024,
-        "proyectos": [
-            {
-                "nombre": "El cielo de Laika",
-                "enlace": ""
-            },
-            {
-                "nombre": "Ciudades de treinta minutos",
-                "enlace": "https://www.amazon.com.mx/dp/B0DDG41VF1"
-            },
-            {
-                "nombre": "Un juego",
-                "enlace": "https://github.com/victorlaureanovega/Un_juego"
-            },
-            {
-                "nombre": "Ordenamiento HRH",
-                "enlace": "https://github.com/victorlaureanovega/Ordenamiento_HRH"
-            }
-        ]
+        "nombre": "El cielo de Laika",
+        "enlace": ""
     },
     {
-        "anio": 2023,
-        "proyectos": [
-            {
-                "nombre": "Túneles",
-                "enlace": "https://www.amazon.com.mx/dp/B0CKKTS121"
-            }
-        ]
+        "nombre": "Túneles",
+        "enlace": "https://www.amazon.com.mx/dp/B0CKKTS121"
     }
 ];
