@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from "react";
-import Archivo from "../Componentes/Archivo";
-import Blog from "../Componentes/Blog";
-import Diario from "../Componentes/Diario";
-import NavegacionPanel from "../Componentes/NavegacionPanel";
-import NavegacionEnlaces from "../Componentes/NavegacionEnlaces";
-import Cargando from "../Componentes/Cargando";
+import Archivo from "@/componentes/Archivo";
+import Blog from "@/componentes/Blog";
+import Diario from "@/componentes/Diario";
+import NavegacionPanel from "@/componentes/NavegacionPanel";
+import NavegacionEnlaces from "@/componentes/NavegacionEnlaces";
+import Cargando from "@/componentes/Cargando";
 
 /*
 Página principal del sitio. Consta de tres secciones: contenido destacado, noticias de Oztotlán y una barra lateral donde visualizar

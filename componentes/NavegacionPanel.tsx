@@ -1,4 +1,4 @@
-import { NavegacionPanelLateral } from "../Data/Interfaces";
+import { NavegacionPanelLateral } from "@/data/Interfaces";
 
 // Este componente representa la barra de navegación del panel lateral (en el que puede alternarse entre el Blog y el Archivo)
 export default function NavegacionPanel({ activo, setActivo }: NavegacionPanelLateral) {

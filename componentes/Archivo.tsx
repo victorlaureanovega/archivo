@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Proyectos } from "../Data/Proyectos";
-import type { ArchivoBlog } from "../Data/Interfaces"
+import { Proyectos } from "@/data/Proyectos";
+import type { ArchivoBlog } from "@/data/Interfaces"
 
 /*
 Este componente es el archivo de proyectos, donde se muestra una tarjeta de acordeón por cada año, junto con los proyectos
