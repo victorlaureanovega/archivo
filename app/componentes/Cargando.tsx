@@ -1,4 +1,4 @@
-import type { CirculoCarga } from "@/data/Interfaces";
+import type { CirculoCarga } from "@/app/utilidades/Interfaces";
 
 // Círculo de carga animado que indica que se muestra antes que algún contenido
 export default function Cargando({ tipo, color }: CirculoCarga) {

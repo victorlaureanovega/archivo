@@ -1,23 +1,22 @@
 'use client';
 
 import { useState } from "react";
-import Archivo from "@/componentes/Archivo";
-import Blog from "@/componentes/Blog";
-import Diario from "@/componentes/Diario";
-import NavegacionPanel from "@/componentes/NavegacionPanel";
-import NavegacionEnlaces from "@/componentes/NavegacionEnlaces";
-import Cargando from "@/componentes/Cargando";
+import Archivo from "@/app/componentes/Archivo";
+import Blog from "@/app/componentes/Blog";
+import Diario from "@/app/componentes/Diario";
+import { DESTACADO } from "@/data/Destacado";
+import NavegacionPanel from "@/app/componentes/NavegacionPanel";
+import NavegacionEnlaces from "@/app/componentes/NavegacionEnlaces";
+import Cargando from "@/app/componentes/Cargando";
 
 /*
-Página principal del sitio. Consta de tres secciones: contenido destacado, noticias de Oztotlán y una barra lateral donde visualizar
-el archivo de proyectos y el blog
+
 */
 export default function Home() {
-  const [activo, setActivo] = useState("archivo");
   const [cargando, setCargando] = useState(true);
 
   return (
-    <main className="flex flex-col md:grid md:grid-cols-[1fr_0.4fr] md:h-screen">
+    <main className="flex flex-col md:grid md:grid-cols-[1fr_0.4fr] md:h-screen bg-neutral-700">
       <div className="md:grid md:grid-rows-[2fr_1fr]">
         {/* Destacado */}
         <section className="relative bg-neutral-700 p-8 md:p-6 overflow-hidden flex items-center justify-center md:py-8">
@@ -26,29 +25,29 @@ export default function Home() {
 
           {/* El iframe se renderiza desde el principio (aunque se mantiene invisible) para evitar el efecto de fade in */}
           <iframe className={`h-65  md:h-full w-[100%] md:w-[75%] ${cargando ? "invisible" : "visible"}`}
-            src="https://www.youtube.com/embed/z6mUjEQjh_g"
+            src={DESTACADO}
             title="Cortometraje de Péndulo a media oscuridad"
             allowFullScreen onLoad={() => setCargando(false)}
           />
         </section>
-
-        {/* Noticia */}
-        <Diario />
       </div>
 
-      {/* Sección lateral */}
-      <section className="bg-black p-6 flex flex-col overflow-hidden">
-        {/* Barra de navegación entre el archivo y el blog */}
-        <NavegacionPanel activo={activo} setActivo={setActivo} />
-
-        <div className="flex-1 overflow-auto">
-          <Archivo activo={activo} />
-          <Blog activo={activo} />
+      <section className="bg-black flex flex-col p-10">
+        <div className="flex flex-1 items-center">
+          <Archivo />
         </div>
-
-        {/* Enlaces personales */}
+        
         <NavegacionEnlaces />
       </section>
+
+      {/* Sección lateral */}
+      {/*<section className="bg-black pt-24 p-8 flex flex-col overflow-hidden">
+        <div className="flex-1 overflow-auto">
+          <Archivo />
+        </div>
+
+        <NavegacionEnlaces />
+      </section>*/}
     </main>
   );
 }
