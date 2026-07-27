@@ -1,4 +1,3 @@
-// Cosas que no entran en ninguna de las otras categorías: publicaciones y entradas del blog
 export const OTROS = [
     {
         nombre: "Katia y la muerte",

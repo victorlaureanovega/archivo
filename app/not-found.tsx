@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// En caso de que se intente acceder a un recurso inexistente
 export default function NotFound() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center gap-6 p-10">

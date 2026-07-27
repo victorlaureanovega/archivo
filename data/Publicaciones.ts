@@ -1,4 +1,3 @@
-// Publicaciones literarias y no literarias
 export const PUBLICACIONES = [
     {
         nombre: "Ciudades de treinta minutos",

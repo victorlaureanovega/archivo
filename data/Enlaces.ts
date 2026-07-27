@@ -1,4 +1,3 @@
-// Para almacenar enlaces personales de interés
 export const ENLACES = [
     {
         "nombre": "Github",

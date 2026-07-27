@@ -8,7 +8,7 @@ export default async function Entrada({ params }: { params: { entrada: string } 
   let Texto;  // Componente que representa el contenido de cada entrada
 
   try {
-    Texto = (await import(`@/app/blog/entradas/${enlace}.mdx`)).default;
+    Texto = (await import(`@/entradas/${enlace}.mdx`)).default;
   }
   catch {
     return <NotFound />;

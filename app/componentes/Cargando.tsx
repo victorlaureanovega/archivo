@@ -1,7 +1,6 @@
-import type { CirculoCarga } from "@/app/utilidades/Interfaces";
+import type { ICirculoCarga } from "@/app/utilidades/Interfaces";
 
-// Círculo de carga animado que indica que se muestra antes que algún contenido
-export default function Cargando({ tipo, color }: CirculoCarga) {
+export default function Cargando({ tipo, color }: ICirculoCarga) {
     return (
         <div className={`absolute inset-0 flex flex-col items-center justify-center gap-4 text-${color}`}>
             <svg className="animate-spin h-8 w-8" viewBox="0 0 24 24">
