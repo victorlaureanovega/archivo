@@ -3,12 +3,12 @@ import NavegacionBlog from "@/app/componentes/NavegacionBlog";
 import NotFound from "@/app/not-found";
 
 export default async function Entrada({ params }: { params: { entrada: string } }) {
-  const { entrada: enlace } = await params;
-  const entrada = Object.values(BLOG).flat().find(e => e.enlace === enlace);
+  const { entrada: ruta } = await params;
+  const entrada = Object.values(BLOG).flat().find(e => e.ruta === ruta);
   let Texto;  // Componente que representa el contenido de cada entrada
 
   try {
-    Texto = (await import(`@/entradas/${enlace}.mdx`)).default;
+    Texto = (await import(`@/entradas/${ruta}.mdx`)).default;
   }
   catch {
     return <NotFound />;
@@ -20,7 +20,7 @@ export default async function Entrada({ params }: { params: { entrada: string } 
       <div className="bg-[#444]">
         {/* Título de la entrada */}
         <div className="text-[#EEE] max-w-[53.5em] mx-8 pt-34 md:mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">{entrada?.titulo}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">{entrada?.nombre}</h1>
           <p className="text-sm pb-6">Publicado el {entrada?.fecha}</p>
         </div>
       </div>

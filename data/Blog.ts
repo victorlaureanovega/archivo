@@ -1,27 +1,31 @@
 export const BLOG = {
     a2026: [
         {
-            titulo: "Noticia de Chulos F. C.",
-            enlace: "noticia-de-chulos-fc",
+            nombre: "Noticia de Chulos F. C.",
+            ruta: "noticia-de-chulos-fc",
+            enlace: "/blog/noticia-de-chulos-fc",
             fecha: "24/07/2026"
         }
     ],
     a2025: [
         {
-            titulo: "Un prólogo tardío",
-            enlace: "un-prologo-tardio",
+            nombre: "Un prólogo tardío",
+            ruta: "un-prologo-tardio",
+            enlace: "/blog/un-prologo-tardio",
             fecha: "19/08/2025"
         },
         {
-            titulo: "Péndulo a media oscuridad",
-            enlace: "pendulo-a-media-oscuridad",
+            nombre: "Péndulo a media oscuridad",
+            ruta: "pendulo-a-media-oscuridad",
+            enlace: "/blog/pendulo-a-media-oscuridad",
             fecha: "18/01/2025"
         }
     ],
     a2024: [
         {
-            titulo: "Carta a una austriaca",
-            enlace: "carta-a-una-austriaca",
+            nombre: "Carta a una austriaca",
+            ruta: "carta-a-una-austriaca",
+            enlace: "/blog/carta-a-una-austriaca",
             fecha: "04/10/2024"
         }
     ]

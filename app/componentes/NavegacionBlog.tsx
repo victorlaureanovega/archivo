@@ -13,9 +13,9 @@ export default function NavegacionBlog() {
                 {/* Listado de todas las entradas publicadas */}
                 <nav className="flex flex-col border-l border-gray-300">
                     {Object.values(BLOG).flat().map((entrada) => (
-                        <Link href={`/blog/${entrada.enlace}`} target="_self" rel="noopener noreferrer" key={entrada.titulo}
+                        <Link href={entrada.enlace} target="_self" rel="noopener noreferrer" key={entrada.nombre}
                             className="pl-4 py-3 text-sm text-gray-700 hover:text-black hover:border-black border-l-2 border-transparent">
-                            <h4>{entrada.titulo}</h4>
+                            <h4>{entrada.nombre}</h4>
                         </Link>
                     ))}
                 </nav>
