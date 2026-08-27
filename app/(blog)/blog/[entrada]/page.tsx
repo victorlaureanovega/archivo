@@ -1,6 +1,37 @@
-import { BLOG } from "@/data/Blog";
 import NavegacionBlog from "@/app/componentes/NavegacionBlog";
 import NotFound from "@/app/not-found";
+import { Metadata } from "next";
+import { BLOG } from "@/data/Blog";
+
+export async function generateMetadata(
+  { params }: { params: { entrada: string } }
+): Promise<Metadata> {
+  const entrada = Object.values(BLOG).flat().find(e => e.ruta === params.entrada);
+
+  if (!entrada) {
+    return {
+      title: "Víctor Laureano Vega"
+    };
+  }
+
+  return {
+    title: `${entrada.nombre} | Víctor Laureano Vega`,
+    description: `Óbice y antonomasia - ${entrada.nombre}`,
+
+    openGraph: {
+      title: entrada.nombre,
+      description: `Óbice y antonomasia - ${entrada.nombre}`,
+      url: `https://victorlaureanovega.com${entrada.enlace}`,
+      type: "article"
+    }
+  };
+}
+
+export async function generateStaticParams() {
+  return Object.values(BLOG).flat().map((entrada) => ({
+    entrada: entrada.ruta,
+  }));
+}
 
 export default async function Entrada({ params }: { params: { entrada: string } }) {
   const { entrada: ruta } = await params;
