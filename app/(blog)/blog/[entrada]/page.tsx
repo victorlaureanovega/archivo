@@ -4,9 +4,11 @@ import { Metadata } from "next";
 import { BLOG } from "@/data/Blog";
 
 export async function generateMetadata(
-  { params }: { params: { entrada: string } }
+  { params }: { params: Promise<{ entrada: string }> }
 ): Promise<Metadata> {
-  const entrada = Object.values(BLOG).flat().find(e => e.ruta === params.entrada);
+  const { entrada: ruta } = await params;
+
+  const entrada = Object.values(BLOG).flat().find(e => e.ruta === ruta);
 
   if (!entrada) {
     return {
